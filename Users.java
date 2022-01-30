@@ -16,7 +16,12 @@ public class Users {
 
     void setCurrentdepositMoney(int delta)
     {
-        this.currentdepositMoney=this.currentdepositMoney-delta;
+         if (this.currentdepositMoney-delta>0)
+        {
+            System.out.println("from account "+this.name+" now we will get some money");
+            this.currentdepositMoney=this.currentdepositMoney-delta;
+        }
+        else System.out.println("Sorry, not enough money on deposit");
     }
 
     void setPinCode(String pinCode)
